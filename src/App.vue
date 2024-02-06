@@ -1,41 +1,50 @@
 <template>
-  <div id="app">
-    <font-awesome-icon icon="fa-brands fa-linkedin" />
-    <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/resume">Resume</router-link>
-      <router-link to="/projects">Projects</router-link>
-      <router-link to="/contact">Contact</router-link>
-    </nav>
-    <router-view/>
+  <div class="container-grid">
+    <div class="d-none d-md-block">
+      <SidebarNav />
+    </div>
+
+    <div class="main-content">
+      <router-view />
+    </div>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script setup lang="ts">
+import SidebarNav from './components/SidebarNav.vue'
+
+
+enum InsureMakeTypeEnum {
+  Insure = 1,
+  InsureLink = 2,
+  QrCode = 3,
 }
 
-nav {
-  display: flex; // Use flexbox for the navigation
-  flex-direction: column;
-  position: fixed;
-  padding: 30px;
-  text-align: left;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 10px;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+// 遍历枚举的值
+for (let type in InsureMakeTypeEnum) {
+  if (isNaN(Number(type))) {
+    console.log(type);
   }
 }
+</script>
+
+<style lang="scss">
+// @import "@/assets/styles/layout.scss";
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  height: 100vh; // Full viewport height
+}
+
+.no-margin {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 250px auto; /* 第一列固定宽度，第二列占据剩余空间 */
+}
+
 </style>

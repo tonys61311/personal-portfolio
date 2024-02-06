@@ -1,7 +1,15 @@
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-
+import { 
+    faUserSecret, 
+    faHouse,
+    faDiagramProject 
+} from '@fortawesome/free-solid-svg-icons'
+import { 
+    faUser,
+    faFileLines,
+    faAddressCard
+} from '@fortawesome/free-regular-svg-icons'
 /*
     import specific icons (Replace or add any other brand icons you need in here)
     Check out the official fontawesome page for all the available icons: https://fontawesome.com/search?o=r&m=free&f=brands
@@ -22,5 +30,10 @@ library.add(
     faLinkedin,
     faMedium,
     faStackOverflow,
-    faXTwitter
+    faXTwitter,
+    faHouse,
+    faDiagramProject,
+    faUser,
+    faFileLines,
+    faAddressCard,
 )
