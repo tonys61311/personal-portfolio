@@ -15,6 +15,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "@kalimahapps/vue-icons": "^1.4.0",
     "@popperjs/core": "^2.11.8",
+    "aos": "^2.3.4",
     "axios": "^1.6.5",
     "bootstrap": "^5.3.2",
     "bootstrap-vue-3": "^0.5.1",
@@ -26,6 +27,7 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -55,7 +57,10 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {},
+    "globals": {
+      "defineProps": "readonly"
+    }
   },
   "browserslist": [
     "> 1%",

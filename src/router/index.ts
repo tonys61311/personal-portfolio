@@ -4,13 +4,12 @@ import AboutView from '../views/AboutView.vue';
 import ResumeView from '../views/ResumeView.vue';
 import ProjectsView from '../views/ProjectsView.vue';
 import ContactView from '../views/ContactView.vue';
-import TestView from '../views/TestView.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: TestView
+    component: HomeView
   },
   {
     path: '/about',

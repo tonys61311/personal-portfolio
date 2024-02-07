@@ -3,12 +3,14 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { 
     faUserSecret, 
     faHouse,
-    faDiagramProject 
+    faDiagramProject,
+    faArrowRight,
 } from '@fortawesome/free-solid-svg-icons'
 import { 
     faUser,
     faFileLines,
-    faAddressCard
+    faAddressCard,
+    faHandPointer,
 } from '@fortawesome/free-regular-svg-icons'
 /*
     import specific icons (Replace or add any other brand icons you need in here)
@@ -36,4 +38,6 @@ library.add(
     faUser,
     faFileLines,
     faAddressCard,
+    faArrowRight,
+    faHandPointer,
 )

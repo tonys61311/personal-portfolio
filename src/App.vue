@@ -13,19 +13,6 @@
 <script setup lang="ts">
 import SidebarNav from './components/SidebarNav.vue'
 
-
-enum InsureMakeTypeEnum {
-  Insure = 1,
-  InsureLink = 2,
-  QrCode = 3,
-}
-
-// 遍历枚举的值
-for (let type in InsureMakeTypeEnum) {
-  if (isNaN(Number(type))) {
-    console.log(type);
-  }
-}
 </script>
 
 <style lang="scss">
@@ -45,6 +32,12 @@ for (let type in InsureMakeTypeEnum) {
 .container-grid {
   display: grid;
   grid-template-columns: 250px auto; /* 第一列固定宽度，第二列占据剩余空间 */
+}
+
+.main-content {
+  background-color: #ead8b372;
+  height: 100vh; // Full viewport height
+  overflow-y: auto; // If content overflows, allow scrolling
 }
 
 </style>
