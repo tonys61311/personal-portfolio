@@ -15,7 +15,7 @@ import SidebarNav from './components/SidebarNav.vue'
 
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 // @import "@/assets/styles/layout.scss";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -32,6 +32,10 @@ import SidebarNav from './components/SidebarNav.vue'
 .container-grid {
   display: grid;
   grid-template-columns: 250px auto; /* 第一列固定宽度，第二列占据剩余空间 */
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: auto; // 调整为只有一列，或其他适当的值
+  }
 }
 
 .main-content {

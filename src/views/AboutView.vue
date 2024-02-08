@@ -1,9 +1,12 @@
 <template>
-  <div class="container box">
+  <div class="container-fluid box">
     <div class="box">
       <title-heading title="About"></title-heading>
-      <p>I am a Front-End developer and App developer. I have 4 years of work experience and I am currently pursuing a CS
-        Master's degree.</p>
+      <p>Web Developer & Software Engineer with over 4 years in the tech sector. I am currently a Master's student in Computer Science at Temple University, and I am actively seeking summer internship opportunities.
+
+During my previous employment, I not only developed insurance websites and apps using Dart and Flutter for efficient cross-platform deployment on iOS and Android, but also employed JavaScript and Vue.js for website development. 
+
+My familiarity with tools like GitHub and SourceTree has been instrumental in ensuring smooth team collaboration and version control. Always eager to learn and collaborate, I'm committed to using technology to enhance user experience and meet business needs.</p>
       <div class="row align-items-center">
         <div class="col-4" aos-init data-aos="fade-right">
           <img src="@/assets/img/avatar.jpg" class="img-fluid">

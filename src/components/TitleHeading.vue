@@ -19,7 +19,7 @@ defineProps({
 });
 </script>
   
-<style lang="scss">
+<style scoped lang="scss">
 .title {
     /* font-size: 32px; */
     font-weight: bold;
