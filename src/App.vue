@@ -40,8 +40,9 @@ import SidebarNav from './components/SidebarNav.vue'
 
 .main-content {
   background-color: #ead8b372;
-  height: 100vh; // Full viewport height
+  // height: 100vh; // Full viewport height
   overflow-y: auto; // If content overflows, allow scrolling
+  min-height: 100vh;
 }
 
 </style>

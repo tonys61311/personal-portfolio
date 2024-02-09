@@ -2,16 +2,18 @@
   <div class="container-fluid box">
     <div class="box">
       <title-heading title="About"></title-heading>
-      <p>Web Developer & Software Engineer with over 4 years in the tech sector. I am currently a Master's student in Computer Science at Temple University, and I am actively seeking summer internship opportunities.
-
-During my previous employment, I not only developed insurance websites and apps using Dart and Flutter for efficient cross-platform deployment on iOS and Android, but also employed JavaScript and Vue.js for website development. 
-
-My familiarity with tools like GitHub and SourceTree has been instrumental in ensuring smooth team collaboration and version control. Always eager to learn and collaborate, I'm committed to using technology to enhance user experience and meet business needs.</p>
+      <pre class="pre-wrap">
+        Web Developer & Software Engineer with over 4 years in the tech sector. I am currently a Master's student in Computer Science at Temple University, and I am actively seeking summer internship opportunities.
+        
+        During my previous employment, I not only developed insurance websites and apps using Dart and Flutter for efficient cross-platform deployment on iOS and Android, but also employed JavaScript and Vue.js for website development. 
+        
+        My familiarity with tools like GitHub and SourceTree has been instrumental in ensuring smooth team collaboration and version control. Always eager to learn and collaborate, I'm committed to using technology to enhance user experience and meet business needs.
+      </pre>
       <div class="row align-items-center">
-        <div class="col-4" aos-init data-aos="fade-right">
+        <div class="col-4 aos-init" data-aos="fade-right">
           <img src="@/assets/img/avatar.jpg" class="img-fluid">
         </div>
-        <div class="col" data-aos="fade-left">
+        <div class="col aos-init" data-aos="fade-left">
           <title-heading title="Front-End & App Developer." :level="3"></title-heading>
           <div class="row content">
             <ul>
@@ -27,7 +29,7 @@ My familiarity with tools like GitHub and SourceTree has been instrumental in en
 
     <div class="box skill">
       <title-heading title="Technical Skills"></title-heading>
-      <div class="row" data-aos="fade-up">
+      <div class="row aos-init" data-aos="fade-up">
         <div class="col" v-for="(skills, category) in technicalSkills" :key="category">
           <title-heading :title="category" level="4" :showIcon=false></title-heading>
           <ul>
@@ -54,9 +56,11 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
   AOS.init({
-      duration: 1200, // Global animation duration in milliseconds
-      // easing: 'fade-in', // Global animation easing
-    });
+    duration: 1200, // Global animation duration in milliseconds
+    // easing: 'fade-in', // Global animation easing
+    once: true,
+  });
+  // AOS.refresh();
 });
 
 const personalInfo = {
@@ -114,5 +118,10 @@ const technicalSkills = {
   .fa-icon {
     margin-right: 10px;
   }
+}
+
+.pre-wrap {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 </style>
