@@ -32,6 +32,7 @@ import SidebarNav from './components/SidebarNav.vue'
 .container-grid {
   display: grid;
   grid-template-columns: 250px auto; /* 第一列固定宽度，第二列占据剩余空间 */
+  min-height: 100vh;
 
   @include media-breakpoint-down(md) {
     grid-template-columns: auto; // 调整为只有一列，或其他适当的值
@@ -42,7 +43,6 @@ import SidebarNav from './components/SidebarNav.vue'
   background-color: #ead8b372;
   // height: 100vh; // Full viewport height
   overflow-y: auto; // If content overflows, allow scrolling
-  min-height: 100vh;
 }
 
 </style>

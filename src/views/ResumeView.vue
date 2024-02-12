@@ -8,7 +8,7 @@
                 <div v-for="(val, key, index) in resumeData" :key="index" class="col-6 aos-init"
                     :data-aos="key == 'leftSide' ? 'fade-right' : 'fade-left'">
                     <resume-item v-for="(item, index) in val" :key="index" :title="item.title" :subTitle="item.subTitle"
-                        :tagContent="item.tagContent">
+                        :tag_content="item.tagContent">
                         <p>{{ item.description }}</p>
                         <ul v-if="item.points">
                             <li v-for="(point, index) in item.points" :key="index" class="my-2">{{ point }}</li>
@@ -55,7 +55,6 @@ const resumeData: ResumeData = {
         {
             title: "Summary",
             subTitle: "Tony Lin",
-            tagContent: "20000",
             description: "I am currently a Master's student in Computer Science at Temple University."
         },
         {

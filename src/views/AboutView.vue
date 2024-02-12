@@ -29,7 +29,7 @@
 
     <div class="box skill">
       <title-heading title="Technical Skills"></title-heading>
-      <div class="row aos-init" data-aos="fade-up">
+      <div class="row aos-init" data-aos="zoom-in">
         <div class="col" v-for="(skills, category) in technicalSkills" :key="category">
           <title-heading :title="category" level="4" :showIcon=false></title-heading>
           <ul>
