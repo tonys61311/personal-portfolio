@@ -9,11 +9,11 @@
         
         My familiarity with tools like GitHub and SourceTree has been instrumental in ensuring smooth team collaboration and version control. Always eager to learn and collaborate, I'm committed to using technology to enhance user experience and meet business needs.
       </pre>
-      <div class="row align-items-center">
-        <div class="col-4 aos-init" data-aos="fade-right">
+      <div class="row align-items-center justify-content-evenly">
+        <div class="col-4" data-aos="fade-right">
           <img src="@/assets/img/avatar.jpg" class="img-fluid">
         </div>
-        <div class="col aos-init" data-aos="fade-left">
+        <div class="col-6" data-aos="fade-left">
           <title-heading title="Front-End & App Developer." :level="3"></title-heading>
           <div class="row content">
             <ul>
@@ -29,7 +29,7 @@
 
     <div class="box skill">
       <title-heading title="Technical Skills"></title-heading>
-      <div class="row aos-init" data-aos="zoom-in">
+      <div class="row" data-aos="zoom-in">
         <div class="col" v-for="(skills, category) in technicalSkills" :key="category">
           <title-heading :title="category" level="4" :showIcon=false></title-heading>
           <ul>
@@ -48,26 +48,13 @@
 
 <script setup lang="ts">
 import TitleHeading from '@/components/TitleHeading.vue';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-import { onMounted } from 'vue';
-
-onMounted(() => {
-  AOS.init({
-    duration: 1200, // Global animation duration in milliseconds
-    // easing: 'fade-in', // Global animation easing
-    once: true,
-  });
-  // AOS.refresh();
-});
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const personalInfo = {
-  "Email:": "tonys61311@gmail.com",
-  "City:": "Philadelphia, USA",
   "Degree:": "CS Master (in progress)",
-  "Work Experience:": "4 years"
+  "Work Experience:": "4 years",
+  "City:": "Philadelphia, USA",
+  "Email:": "tonys61311@gmail.com"
 };
 
 const technicalSkills = {

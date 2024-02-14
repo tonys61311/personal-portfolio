@@ -1,13 +1,123 @@
 <template>
-    <div>
-        <h1>Contact</h1>
-        <!-- Reports and analytics content goes here -->
+    <div class="container-fluid box resume">
+        <div class="box">
+            <title-heading title="Contact"></title-heading>
+
+
+            <b-row align-v="center">
+                <b-col md="8" data-aos="fade-right">
+                    <b-card>
+                        <b-row align-v="center">
+                            <b-card-body title="Let's Talk">
+                                <b-card-text>
+                                    If you're interested in my work or have any questions, please don't hesitate to
+                                    reach out.
+                                </b-card-text>
+                            </b-card-body>
+                            <b-col md="8">
+
+                                <b-form @submit.prevent="handleSubmit" class="contact-form " novalidate>
+
+                                    <b-form-group v-for="field in formFields" :key="field.name" :label="field.label"
+                                        :label-for="field.name" :state="field.state"
+                                        :invalid-feedback="field.invalidFeedback">
+                                        <b-form-input v-if="field.type !== FieldType.TextArea" :type="field.type"
+                                            :id="field.name" :placeholder="field.placeholder" v-model="field.modelValue"
+                                            @input="field.validate()" :state="field.state" size="lg"></b-form-input>
+                                        <b-form-textarea v-else :id="field.name" :placeholder="field.placeholder"
+                                            v-model="field.modelValue" rows="3" @input="field.validate()"
+                                            :state="field.state" size="lg"></b-form-textarea>
+                                    </b-form-group>
+
+                                    <b-button type="submit" variant="primary">Submit</b-button>
+                                </b-form>
+
+                            </b-col>
+                            <b-col>
+                                <b-card-body title="Email">
+                                    <b-card-text>
+                                        tonys61311@gmail.com
+                                    </b-card-text>
+                                </b-card-body>
+                                <b-card-body title="Based in">
+                                    <b-card-text>
+                                        Philadelphia, Pennsylvania
+                                    </b-card-text>
+                                </b-card-body>
+                                <b-row class="m-3">
+                                    <b-col md="auto">
+                                        <font-awesome-icon icon="fa-brands fa-linkedin" size="2x" />
+                                    </b-col>
+                                    <b-col md="auto">
+                                        <font-awesome-icon icon="fa-brands fa-github" size="2x" />
+                                    </b-col>
+                                    <b-col md="auto">
+                                        <font-awesome-icon icon="fa-brands fa-facebook" size="2x" />
+                                    </b-col>
+                                </b-row>
+                            </b-col>
+                        </b-row>
+                    </b-card>
+                </b-col>
+                <b-col data-aos="fade-left" class="text-center">
+                    <img src="@/assets/img/Lina.jpg" alt="Image" class="card-img rounded-3 tilt">
+                </b-col>
+            </b-row>
+        </div>
+        <footer class="footer">
+            <p>My Email: [Your Email Address]</p>
+        </footer>
     </div>
 </template>
   
-<script lang="ts">
-import { Vue } from 'vue-class-component';
-
-export default class ContactView extends Vue { }
-</script>
   
+<script setup lang="ts">
+import { BForm, BFormGroup, BFormInput, BFormTextarea, BButton } from 'bootstrap-vue-3';
+import TitleHeading from '@/components/TitleHeading.vue';
+import { FormField, FieldType } from '@/ts/enum/FieldType';
+import { reactive } from 'vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+const formFields: FormField[] = reactive([
+    new FormField('name', 'Name *', FieldType.Text, 'Your Name', 'Name is required'),
+    new FormField('email', 'Email *', FieldType.Email, 'Your Email', 'A valid email is required'),
+    new FormField('message', 'Message *', FieldType.TextArea, 'Your Message', 'Message cannot be empty')
+]);
+
+const handleSubmit = () => {
+    const isFormValid = formFields.reduce((val, field) => {
+
+        if (!field.validate()) {
+            console.log(`Validation failed for field: ${field.label}`);
+            return false;
+        }
+        return val;
+    }, true);
+
+    if (isFormValid) {
+        console.log('Form is valid, proceed with submission');
+        // Implement form submission logic here
+    } else {
+        console.log('Validation failed');
+    }
+};
+
+
+</script>
+
+<style scoped lang="scss">
+// @keyframes tilt-animation {
+//   0%, 100% {
+//     transform: rotate(-7deg);
+//   }
+//   50% {
+//     transform: rotate(7deg);
+//   }
+// }
+
+.tilt {
+    //   animation: tilt-animation 2.5s infinite linear;
+    transform: rotate(-7deg);
+    //   width: 80%;
+}
+</style>

@@ -1,13 +1,13 @@
 <template>
-    <div>
-        <h1>Projects</h1>
-        <!-- Budget planning content goes here -->
+    <div class="container-fluid box resume">
+        <div class="box">
+            <title-heading title="Projects"></title-heading>
+        </div>
     </div>
 </template>
   
-<script lang="ts">
-import { Vue } from 'vue-class-component';
+<script setup lang="ts">
+import TitleHeading from '@/components/TitleHeading.vue';
 
-export default class ProjectsView extends Vue { }
 </script>
   

@@ -5,7 +5,7 @@
             <p>I am a Front-End developer and App developer. I have 4 years of work experience and I am currently pursuing a
                 CS Master's degree.</p>
             <div class="row">
-                <div v-for="(val, key, index) in resumeData" :key="index" class="col-6 aos-init"
+                <div v-for="(val, key, index) in resumeData" :key="index" class="col-6"
                     :data-aos="key == 'leftSide' ? 'fade-right' : 'fade-left'">
                     <resume-item v-for="(item, index) in val" :key="index" :title="item.title" :subTitle="item.subTitle"
                         :tag_content="item.tagContent">
@@ -24,18 +24,6 @@
 <script setup lang="ts">
 import TitleHeading from '@/components/TitleHeading.vue';
 import ResumeItem from '@/components/ResumeItem.vue';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-import { onMounted } from 'vue';
-
-onMounted(() => {
-    AOS.init({
-        duration: 1200, // Global animation duration in milliseconds
-        // easing: 'fade-in', // Global animation easing
-    });
-});
 
 interface ResumeItemWithoutPoints {
     title?: string;

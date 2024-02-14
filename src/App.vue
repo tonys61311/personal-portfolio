@@ -12,7 +12,19 @@
 
 <script setup lang="ts">
 import SidebarNav from './components/SidebarNav.vue'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { onMounted } from 'vue';
 
+onMounted(() => {
+  AOS.init({
+    duration: 1200, // Global animation duration in milliseconds
+    // easing: 'fade-in', // Global animation easing
+    once: true,
+    delay: 300,
+  });
+  // AOS.refresh();
+});
 </script>
 
 <style scoped lang="scss">

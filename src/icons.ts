@@ -22,7 +22,8 @@ import {
     faLinkedin,
     faMedium,
     faStackOverflow,
-    faXTwitter
+    faXTwitter,
+    faFacebook,
 } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
@@ -40,4 +41,5 @@ library.add(
     faAddressCard,
     faArrowRight,
     faHandPointer,
+    faFacebook,
 )

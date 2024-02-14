@@ -44,24 +44,11 @@
   </nav>
 </template>
   
-<script lang="ts">
+<script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { SideBarType } from '@/ts/enum/SideBarType' // Assuming the correct file path is '@/js/enum/SideBarType'
+import { SideBarType } from '@/ts/enum/SideBarType'
 
-export default {
-  name: 'SidebarNav',
-  components: {
-    FontAwesomeIcon,
-  },
-  setup() {
-
-    const SideBarTypes = SideBarType.getAllSideBarTypes()
-
-    return {
-      SideBarTypes,
-    }
-  },
-}
+const SideBarTypes = SideBarType.getAllSideBarTypes();
 </script>
   
 <style lang="scss">
