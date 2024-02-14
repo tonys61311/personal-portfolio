@@ -9,9 +9,8 @@
                     <b-card>
                         <b-row align-v="center">
                             <b-card-body title="Let's Talk">
-                                <b-card-text>
-                                    If you're interested in my work or have any questions, please don't hesitate to
-                                    reach out.
+                                <b-card-text class="fs-5">
+                                    If you have any questions, please don't hesitate to reach out.
                                 </b-card-text>
                             </b-card-body>
                             <b-col md="8">
@@ -19,17 +18,18 @@
                                 <b-form @submit.prevent="handleSubmit" class="contact-form " novalidate>
 
                                     <b-form-group v-for="field in formFields" :key="field.name" :label="field.label"
-                                        :label-for="field.name" :state="field.state"
-                                        :invalid-feedback="field.invalidFeedback">
+                                        :label-for="field.name" :state="field.state" class="position-relative formGroup">
                                         <b-form-input v-if="field.type !== FieldType.TextArea" :type="field.type"
                                             :id="field.name" :placeholder="field.placeholder" v-model="field.modelValue"
-                                            @input="field.validate()" :state="field.state" size="lg"></b-form-input>
+                                            @input="field.validate()" :state="field.state" size="lg" trim></b-form-input>
                                         <b-form-textarea v-else :id="field.name" :placeholder="field.placeholder"
                                             v-model="field.modelValue" rows="3" @input="field.validate()"
-                                            :state="field.state" size="lg"></b-form-textarea>
+                                            :state="field.state" size="lg" trim></b-form-textarea>
+                                            <div class="invalid-tooltip">{{ field.invalidFeedback }}</div>
+                                            
                                     </b-form-group>
 
-                                    <b-button type="submit" variant="primary">Submit</b-button>
+                                    <b-button type="submit" pill variant="outline-dark">Send Message</b-button>
                                 </b-form>
 
                             </b-col>
@@ -64,9 +64,6 @@
                 </b-col>
             </b-row>
         </div>
-        <footer class="footer">
-            <p>My Email: [Your Email Address]</p>
-        </footer>
     </div>
 </template>
   
@@ -119,5 +116,13 @@ const handleSubmit = () => {
     //   animation: tilt-animation 2.5s infinite linear;
     transform: rotate(-7deg);
     //   width: 80%;
+}
+
+.feedback {
+    display: none;
+}
+
+.formGroup {
+    margin-bottom: 2rem !important;;
 }
 </style>

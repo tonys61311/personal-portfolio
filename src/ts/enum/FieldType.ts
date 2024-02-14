@@ -30,10 +30,7 @@ class FormField {
     }
 
     validate(): boolean {
-        
         const validator = ValidationStrategies[this.type];
-        console.log('1111111', validator);
-        console.log(this.type);
         if (validator) {
             const isValid = validator(this.modelValue);
             this.state = isValid;

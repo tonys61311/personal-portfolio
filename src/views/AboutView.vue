@@ -11,7 +11,7 @@
       </pre>
       <div class="row align-items-center justify-content-evenly">
         <div class="col-4" data-aos="fade-right">
-          <img src="@/assets/img/avatar.jpg" class="img-fluid">
+          <img src="@/assets/img/avatar.jpg" class="img-fluid img-thumbnail">
         </div>
         <div class="col-6" data-aos="fade-left">
           <title-heading title="Front-End & App Developer." :level="3"></title-heading>
