@@ -25,11 +25,11 @@
                                         <b-form-textarea v-else :id="field.name" :placeholder="field.placeholder"
                                             v-model="field.modelValue" rows="3" @input="field.validate()"
                                             :state="field.state" size="lg" trim></b-form-textarea>
-                                            <div class="invalid-tooltip">{{ field.invalidFeedback }}</div>
-                                            
+                                        <div class="invalid-tooltip">{{ field.invalidFeedback }}</div>
+
                                     </b-form-group>
 
-                                    <b-button type="submit" pill variant="outline-dark">Send Message</b-button>
+                                    <b-button class="m-2" type="submit" pill variant="outline-dark">Send Message</b-button>
                                 </b-form>
 
                             </b-col>
@@ -71,9 +71,10 @@
 <script setup lang="ts">
 import { BForm, BFormGroup, BFormInput, BFormTextarea, BButton } from 'bootstrap-vue-3';
 import TitleHeading from '@/components/TitleHeading.vue';
-import { FormField, FieldType } from '@/ts/enum/FieldType';
+import { FormField, FieldType, FormData } from '@/ts/enum/FieldType';
 import { reactive } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import axios from 'axios';
 
 const formFields: FormField[] = reactive([
     new FormField('name', 'Name *', FieldType.Text, 'Your Name', 'Name is required'),
@@ -93,10 +94,31 @@ const handleSubmit = () => {
 
     if (isFormValid) {
         console.log('Form is valid, proceed with submission');
-        // Implement form submission logic here
+
+        const data: FormData = {
+            name: formFields[0].modelValue,
+            email: formFields[1].modelValue,
+            message: formFields[2].modelValue,
+        };
+        summit(data);
     } else {
         console.log('Validation failed');
     }
+};
+
+const summit = async (data: FormData) => {
+    try {
+        await axios.post('/.netlify/functions/submit-form', data).then(response => {
+            console.log('Data:', response);
+        })
+            .catch(error => {
+                console.error('There was an error!', error);
+            });
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        // Handle error here
+    }
+
 };
 
 
@@ -123,6 +145,7 @@ const handleSubmit = () => {
 }
 
 .formGroup {
-    margin-bottom: 2rem !important;;
+    margin-bottom: 2rem !important;
+    ;
 }
 </style>

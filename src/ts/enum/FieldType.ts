@@ -41,4 +41,10 @@ class FormField {
     }
 }
 
-export { FormField, FieldType };
+interface FormData {
+    name: string;
+    email: string;
+    message: string;
+}
+
+export { FormField, FieldType, FormData };
