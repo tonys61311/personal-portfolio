@@ -23,24 +23,28 @@ exports.handler = async (event, context) => {
       text: message
     };
 
-    mg.messages().send(data, function (error, body) {
-      if (error) {
-        console.log("发送邮件出错：", error);
-      } else {
-        console.log("邮件发送成功：", body);
-      }
+    const body = await new Promise((resolve, reject) => {
+      mg.messages().send(data, (error, body) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(body);
+        }
+      });
     });
 
-
+    // 邮件发送成功
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: '表单提交成功!' }),
+      body: JSON.stringify({ message: '表单提交成功!', body: body })
     };
   } catch (error) {
     console.error('发送邮件出错：', error);
+    // 根据错误类型返回不同的状态码
+    const statusCode = error.statusCode ? error.statusCode : 500; // 使用Mailgun错误的状态码或通用500
     return {
-      statusCode: 500,
-      body: JSON.stringify({ message: '邮件发送失败', error: error.message }),
+      statusCode: statusCode,
+      body: JSON.stringify({ message: '邮件发送失败', error: error.message })
     };
   }
 };
