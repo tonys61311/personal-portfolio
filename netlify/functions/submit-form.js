@@ -16,20 +16,20 @@ exports.handler = async (event, context) => {
     const domain = process.env.MAILGUN_DOMAIN;
     const mg = mailgun({ apiKey: apiKey, domain: domain });
 
-    const data = {
-      from: `${name} <mailgun@${domain}>`,
-      to: 'tonys61311@gmail.com',
-      subject: `New message from ${name} <${email}>`,
-      text: message
-    };
+    // const data = {
+    //   from: `${name} <mailgun@${domain}>`,
+    //   to: 'tonys61311@gmail.com',
+    //   subject: `New message from ${name} <${email}>`,
+    //   text: message
+    // };
 
-    mg.messages().send(data, function (error, body) {
-      if (error) {
-        console.log("发送邮件出错：", error);
-      } else {
-        console.log("邮件发送成功：", body);
-      }
-    });
+    // mg.messages().send(data, function (error, body) {
+    //   if (error) {
+    //     console.log("发送邮件出错：", error);
+    //   } else {
+    //     console.log("邮件发送成功：", body);
+    //   }
+    // });
 
 
     return {
