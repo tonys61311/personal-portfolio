@@ -45,14 +45,10 @@
                                     </b-card-text>
                                 </b-card-body>
                                 <b-row class="m-3">
-                                    <b-col md="auto">
-                                        <font-awesome-icon icon="fa-brands fa-linkedin" size="2x" />
-                                    </b-col>
-                                    <b-col md="auto">
-                                        <font-awesome-icon icon="fa-brands fa-github" size="2x" />
-                                    </b-col>
-                                    <b-col md="auto">
-                                        <font-awesome-icon icon="fa-brands fa-facebook" size="2x" />
+                                    <b-col v-for="socialLinkType in socialLinkTypes" :key="socialLinkType.getTitle()" md="auto">
+                                        <a :href="socialLinkType.getLink()" class="link-dark link-opacity-50-hover" target="_blank" rel="noopener noreferrer">
+                                            <font-awesome-icon :icon="socialLinkType.getIconName()" size="2x" />
+                                        </a>
                                     </b-col>
                                 </b-row>
                             </b-col>
@@ -75,6 +71,7 @@ import { FormField, FieldType, FormData } from '@/ts/enum/FieldType';
 import { reactive } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import axios from 'axios';
+import { SocialLinkType } from '@/ts/enum/SocialLinkType'
 
 const formFields: FormField[] = reactive([
     new FormField('name', 'Name *', FieldType.Text, 'Your Name', 'Name is required'),
@@ -120,6 +117,8 @@ const summit = async (data: FormData) => {
     }
 
 };
+
+const socialLinkTypes = SocialLinkType.getAllSocialLinkTypes();
 
 
 </script>

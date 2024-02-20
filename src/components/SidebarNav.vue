@@ -9,23 +9,21 @@
           Tony Lin
         </span>
       </div>
-      <div class="row icons">
-        <div class="col"></div>
-        <div class="col">
-          <font-awesome-icon icon="fa-brands fa-linkedin" size="2x" />
+      <div class="icons row justify-content-center">
+        <div v-for="socialLinkType in socialLinkTypes" :key="socialLinkType.getTitle()" class="col-3">
+          <a :href="socialLinkType.getLink()" class="custom-link link-light link-opacity-25-hover" target="_blank" rel="noopener noreferrer">
+            <font-awesome-icon :icon="socialLinkType.getIconName()" size="2x" />
+          </a>
         </div>
-        <div class="col">
-          <font-awesome-icon icon="fa-brands fa-github" size="2x" />
-        </div>
-        <div class="col"></div>
       </div>
       <div class="row">
-        <router-link v-for="SideBarType in SideBarTypes" :key="SideBarType.getPath()" :to="SideBarType.getPath()" class="nav-link" active-class="active">
+        <router-link v-for="SideBarType in sideBarTypes" :key="SideBarType.getPath()" :to="SideBarType.getPath()"
+          class="nav-link" active-class="active">
           <div class="container">
             <div class="row">
               <div class="col-2" />
               <div class="col">
-                <font-awesome-icon :icon="SideBarType.getIconName()" class="link-icon"/>
+                <font-awesome-icon :icon="SideBarType.getIconName()" class="link-icon" />
                 <span>
                   {{ SideBarType.getTitle() }}
                 </span>
@@ -47,8 +45,10 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { SideBarType } from '@/ts/enum/SideBarType'
+import { SocialLinkType } from '@/ts/enum/SocialLinkType'
 
-const SideBarTypes = SideBarType.getAllSideBarTypes();
+const sideBarTypes = SideBarType.getAllSideBarTypes();
+const socialLinkTypes = SocialLinkType.getSideBarSocialLinkTypes();
 </script>
   
 <style lang="scss">
