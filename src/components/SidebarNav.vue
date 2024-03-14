@@ -2,7 +2,7 @@
   <nav class="d-flex flex-column bg-dark text-white sidebar-nav">
     <BContainer class="profile">
       <div>
-        <img src="@/assets/img/avatar.jpg" alt="" class="rounded-circle">
+        <img src="@/assets/img/avatar_square.jpg" alt="" class="rounded-circle ">
       </div>
       <div class="row">
         <span class="name">
