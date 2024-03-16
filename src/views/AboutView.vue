@@ -10,7 +10,7 @@
         My familiarity with tools like GitHub and SourceTree has been instrumental in ensuring smooth team collaboration and version control. Always eager to learn and collaborate, I'm committed to using technology to enhance user experience and meet business needs.
       </pre>
       <div class="row align-items-center justify-content-evenly">
-        <div class="col-4" data-aos="fade-right">
+        <div class="col-4 d-flex justify-content-center" data-aos="fade-right">
           <img src="@/assets/img/avatar_3.jpg" class="img-fluid img-thumbnail">
         </div>
         <div class="col-6" data-aos="fade-left">
@@ -72,6 +72,8 @@ const technicalSkills = {
 
   .img-fluid {
     border-radius: 20%;
+    max-height:400px;
+    height: auto;
   }
 }
 

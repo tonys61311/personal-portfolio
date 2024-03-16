@@ -54,22 +54,19 @@ onMounted(() => {
 }
 
 .main-content {
-  position: relative;
+  // position: relative;
   background-image: url('@/assets/img/background.jpg'); // 设置背景图片
   background-size: cover; // 覆盖整个容器
   background-repeat: no-repeat; // 不重复背景图片
   overflow-y: auto; // 如果内容溢出，允许滚动
   // background-color: #ead8b372;
+  height: 100vh;
 }
 
 .custom-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: rgba(255, 255, 255, 0.5); /* 半透明遮罩 */
   z-index: 1; /* 确保遮罩层位于内容之上 */
+  min-height: 100vh;
 }
 
 /* 确保 router-view 和其他内容能够正确显示在遮罩层之上 */
