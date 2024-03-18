@@ -23,7 +23,7 @@ onMounted(() => {
     duration: 1200, // Global animation duration in milliseconds
     // easing: 'fade-in', // Global animation easing
     once: true,
-    delay: 300,
+    delay: 100,
   });
   // AOS.refresh();
 });
@@ -58,9 +58,10 @@ onMounted(() => {
   background-image: url('@/assets/img/background.jpg'); // 设置背景图片
   background-size: cover; // 覆盖整个容器
   background-repeat: no-repeat; // 不重复背景图片
+  background-attachment: fixed; // 固定背景图像，不随内容滚动
   overflow-y: auto; // 如果内容溢出，允许滚动
   // background-color: #ead8b372;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .custom-overlay {

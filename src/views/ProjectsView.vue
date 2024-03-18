@@ -2,7 +2,7 @@
     <div class="container-fluid box resume">
         <div class="box">
             <title-heading title="Projects"></title-heading>
-            <b-card v-for="(project, index) in projects" :key="index" class="custom-card mx-auto my-3" bg-variant="Light">
+            <b-card v-for="(project, index) in projects" :key="index" class="custom-card mx-auto my-3" bg-variant="Light" data-aos="zoom-out">
                 <b-row align-v="center">
                     <b-col md="6" :order-md="index % 2">
                         <b-card-body :title="project.title">
