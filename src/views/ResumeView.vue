@@ -75,8 +75,7 @@ const resumeData: ResumeData = {
             tagContent: "Aug 2022 - June 2023",
             description: "YU-GIN ENTERPRISE CO LTD, New Taipei City, Taiwan",
             points: [
-                "Crafted a unique, responsive company website using JavaScript, effectively spotlighting the products of my company.",
-                "Adopted Vue.js as a framework for front-end development, ensuring systematic organization and clear demarcation of business functionalities.",
+                "Developed a unique, responsive company website using Vue.js, leveraging modular design to organize business logic, enhance code scalability and reusability, and reduce development and maintenance costs by 50%.",
                 "Employed GitHub as a collaborative tool, ensuring code tracking and updates for the website."
             ]
         },

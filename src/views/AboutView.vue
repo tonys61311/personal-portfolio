@@ -3,11 +3,7 @@
     <div class="box">
       <title-heading title="About"></title-heading>
       <pre class="pre-wrap">
-        Web Developer & Software Engineer with over 4 years in the tech sector. I am currently a Master's student in Computer Science at Temple University, and I am actively seeking summer internship opportunities.
-        
-        During my previous employment, I not only developed insurance websites and apps using Dart and Flutter for efficient cross-platform deployment on iOS and Android, but also employed JavaScript and Vue.js for website development. 
-        
-        My familiarity with tools like GitHub and SourceTree has been instrumental in ensuring smooth team collaboration and version control. Always eager to learn and collaborate, I'm committed to using technology to enhance user experience and meet business needs.
+        Web Developer & Software Engineer with over 4 years in the tech sector. During my previous employment, I not only developed insurance websites and apps using Dart and Flutter for efficient cross-platform deployment on iOS and Android, but also employed JavaScript and Vue.js for website development. 
       </pre>
       <div class="row align-items-center justify-content-evenly">
         <div class="col-4 d-flex justify-content-center" data-aos="fade-right">
@@ -51,17 +47,18 @@ import TitleHeading from '@/components/TitleHeading.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const personalInfo = {
-  "Degree:": "CS Master (in progress)",
+  "Degree:": "CS Master",
   "Work Experience:": "4 years",
   "City:": "Philadelphia, USA",
   "Email:": "tonys61311@gmail.com"
 };
 
 const technicalSkills = {
-  "Front-End": ["JavaScript (Vue.js)", "HTML", "CSS"],
+  "Front-End": ["JavaScript", "TypeScript", "Vue.js", "HTML", "CSS"],
   "App": ["Dart(Flutter)", "SwiftUI"],
-  "Back-End & Database": ["Java", "SQLite", "SQL Server"],
-  "Version Control": ["Git", "Github", "SourceTree"]
+  "Back-End": ["Java", "Python", "Django"],
+  "Database": ["MySQL", "SQLite", "SQL Server"],
+  "Version Control": ["Git", "Github"]
 };
 </script>
 
