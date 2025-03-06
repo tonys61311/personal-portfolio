@@ -7,5 +7,6 @@ module.exports = defineConfig({
         additionalData: `@import "~bootstrap/scss/bootstrap";`
       }
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === 'production' ? '/personal-portfolio/' : '/'
 })
