@@ -57,7 +57,7 @@ const projects: Project[] = [
         technologies: ["Dart", "Flutter"],
         imagePath: require('@/assets/img/minesweeper.png'),
         githubLink: "https://github.com/tonys61311/AppGames.git",
-        websiteLink: "https://appgames.hclin.me",
+        websiteLink: "https://tonys61311.github.io/AppGames",
     },
     {
         title: "MahJong Guessing Game, Mobile App and Website",
@@ -65,7 +65,7 @@ const projects: Project[] = [
         technologies: ["Dart", "Flutter"],
         imagePath: require('@/assets/img/mahjong.png'),
         githubLink: "https://github.com/tonys61311/AppGames.git",
-        websiteLink: "https://appgames.hclin.me",
+        websiteLink: "https://tonys61311.github.io/AppGames",
     },
     {
         title: "Portfolio Website",
@@ -73,7 +73,7 @@ const projects: Project[] = [
         technologies: ["Vue.js", "TS", "HTML", "CSS"],
         imagePath: require('@/assets/img/portfolio.png'),
         githubLink: "https://github.com/tonys61311/personal-portfolio.git",
-        websiteLink: "https://hclin.me/",
+        websiteLink: "https://tonys61311.github.io/personal-portfolio",
     },
     {
         title: "Cloud Drive Application",
