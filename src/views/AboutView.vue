@@ -3,7 +3,7 @@
     <div class="box">
       <title-heading title="About"></title-heading>
       <pre class="pre-wrap">
-        Web Developer & Software Engineer with over 4 years in the tech sector. During my previous employment, I not only developed insurance websites and apps using Dart and Flutter for efficient cross-platform deployment on iOS and Android, but also employed JavaScript and Vue.js for website development. 
+        {{ introduction }}
       </pre>
       <div class="row align-items-center justify-content-evenly">
         <div class="col-4 d-flex justify-content-center" data-aos="fade-right">
@@ -60,6 +60,10 @@ const technicalSkills = {
   "Database": ["MySQL", "SQLite", "SQL Server"],
   "Version Control": ["Git", "Github"]
 };
+
+const introduction = `
+  I am a software engineer with four years of experience in frontend and mobile app development, specializing in Vue.js and Flutter.
+`;
 </script>
 
 <style lang="scss">

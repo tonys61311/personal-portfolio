@@ -76,14 +76,14 @@ const resumeData: ResumeData = {
             tagContent: "Dec 2018 - Mar 2022",
             description: "INTELLIGENT INFORMATION SERVICE LTD, Taipei City, Taiwan",
             points: [
-                "Spearheaded the development of responsive and adaptive UI for insurance company websites and apps from scratch using JavaScript and Dart, ensuring optimal user experience across various devices.",
-                "Implemented modularity in projects to enhance code extensibility, and reusability, making it easier to test and maintain, effectively boosting productivity and code readability.",
+                "Engineered large-scale insurance projects (Website, Mobile App) using Vue.js and Flutter, enhancing development efficiency and improving the digital insurance application experience.",
+                "Implemented Vuex and the BLoC pattern for state management, effectively handling large-scale data and optimizing state changes to improve performance.",
                 "Employed Flutter to simultaneously build apps for iOS and Android, leading to a 50% reduction in development costs.",
-                "Led the frontend development team, providing technical guidance and conducting code reviews to enhance code quality, reusability, and development efficiency.",
-                "Implemented SQLite for temporary app data access, ensuring data retention during internet outages.",
-                "Designed the frontend architecture using Vue.js, establishing a scalable and maintainable structure by configuring Vue settings, environment files, and centralized API management to ensure consistency and efficiency across the project.",
-                "Leveraged Vue.js for frontend development, systematically organizing screen components and business logic to minimize the dependency between functions.",
-                "Utilized Git and SourceTree for version control, facilitating streamlined team development and maintenance."
+                "Developed a responsive UI design, ensuring system adaptability across various devices and enhancing user experience.",
+                "Handled validation for 500+ input fields before submission to the backend, ensuring data accuracy and integrity.",
+                "Developed a modular UI architecture, leveraging 50+ shared components to improve code reusability by 40% and reduce testing time by 25%, effectively boosting productivity and maintainability.",
+                "Designed and established a well-structured frontend architecture by configuring framework settings, managing environment files, and centralizing API management, ensuring scalability and maintainability.",
+                "Managed the Main branch and conducted code reviews to enhance code quality, reusability, and overall development efficiency."
             ]
         }
     ]
@@ -99,5 +99,3 @@ const resumeData: ResumeData = {
     }
 }
 </style>
-
-  
