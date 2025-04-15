@@ -67,16 +67,16 @@
 <script setup lang="ts">
 import { BForm, BFormGroup, BFormInput, BFormTextarea, BButton } from 'bootstrap-vue-3';
 import TitleHeading from '@/components/TitleHeading.vue';
-import { FormField, FieldType, FormData } from '@/ts/enum/FieldType';
 import { reactive } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import axios from 'axios';
 import { SocialLinkFactory } from '@/models/social-link/SocialLinkItem';
+import { EmailField, FormFieldBase, TextAreaField, TextField, FormData, FieldType } from '@/models/form/FormField';
 
-const formFields: FormField[] = reactive([
-    new FormField('name', 'Name *', FieldType.Text, 'Your Name', 'Name is required'),
-    new FormField('email', 'Email *', FieldType.Email, 'Your Email', 'A valid email is required'),
-    new FormField('message', 'Message *', FieldType.TextArea, 'Your Message', 'Message cannot be empty')
+const formFields: FormFieldBase[] = reactive([
+  new TextField('name', 'Name *', 'Your Name', 'Name is required'),
+  new EmailField('email', 'Email *', 'Your Email', 'A valid email is required'),
+  new TextAreaField('message', 'Message *', 'Your Message', 'Message cannot be empty')
 ]);
 
 const handleSubmit = () => {
