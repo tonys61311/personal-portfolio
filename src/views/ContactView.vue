@@ -71,7 +71,7 @@ import { FormField, FieldType, FormData } from '@/ts/enum/FieldType';
 import { reactive } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import axios from 'axios';
-import { SocialLinkType } from '@/ts/enum/SocialLinkType'
+import { SocialLinkFactory } from '@/models/social-link/SocialLinkItem';
 
 const formFields: FormField[] = reactive([
     new FormField('name', 'Name *', FieldType.Text, 'Your Name', 'Name is required'),
@@ -118,8 +118,7 @@ const summit = async (data: FormData) => {
 
 };
 
-const socialLinkTypes = SocialLinkType.getAllSocialLinkTypes();
-
+const socialLinkTypes = SocialLinkFactory.getAllSocialLinks();
 
 </script>
 

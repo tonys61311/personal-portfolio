@@ -28,10 +28,9 @@
 <script setup lang="ts">
 import TitleHeading from '@/components/TitleHeading.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { SocialLinkType } from '@/ts/enum/SocialLinkType'
-import { SocialLinkTypeEnum } from '@/ts/enum/SocialLinkType'
+import { GithubLink } from '@/models/social-link/SocialLinkItem';
 
-const githubIcon = new SocialLinkType(SocialLinkTypeEnum.Github)
+const githubIcon = new GithubLink();
 
 interface Project {
     title: string;

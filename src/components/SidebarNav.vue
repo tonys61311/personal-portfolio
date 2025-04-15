@@ -17,15 +17,15 @@
         </div>
       </div>
       <div class="row">
-        <router-link v-for="SideBarType in sideBarTypes" :key="SideBarType.getPath()" :to="SideBarType.getPath()"
+        <router-link v-for="sidebarItem in sidebarItems" :key="sidebarItem.getPath()" :to="sidebarItem.getPath()"
           class="nav-link" active-class="active">
           <div class="container">
             <div class="row">
               <div class="col-2" />
               <div class="col">
-                <font-awesome-icon :icon="SideBarType.getIconName()" class="link-icon" />
+                <font-awesome-icon :icon="sidebarItem.getIconName()" class="link-icon" />
                 <span>
-                  {{ SideBarType.getTitle() }}
+                  {{ sidebarItem.getTitle() }}
                 </span>
               </div>
             </div>
@@ -44,11 +44,11 @@
   
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { SideBarType } from '@/ts/enum/SideBarType'
-import { SocialLinkType } from '@/ts/enum/SocialLinkType'
+import { SideBarFactory } from '@/models/sidebar/SideBarItem';
+import { SocialLinkFactory } from '@/models/social-link/SocialLinkItem';
 
-const sideBarTypes = SideBarType.getAllSideBarTypes();
-const socialLinkTypes = SocialLinkType.getSideBarSocialLinkTypes();
+const sidebarItems = SideBarFactory.getAllSideBarItems();
+const socialLinkTypes = SocialLinkFactory.getSideBarSocialLinks();
 </script>
   
 <style lang="scss">
