@@ -86,7 +86,8 @@ const introduction = `
     margin-bottom: 20px;
     // display: flex;
     align-items: center;
-
+    white-space: nowrap;
+    
     .icon {
       margin-right: 10px;
       color: #149ddd;
