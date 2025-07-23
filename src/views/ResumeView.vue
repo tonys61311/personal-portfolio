@@ -49,7 +49,7 @@ const resumeData: ResumeData = {
         {
             title: "Education",
             subTitle: "Master Of Science - MS, Computer Science",
-            tagContent: "Aug 2023 - Present",
+            tagContent: "Aug 2023 - May 2025",
             description: "Temple University, Philadelphia, PA"
         },
         {

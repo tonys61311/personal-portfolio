@@ -5,7 +5,7 @@
 
 
             <b-row align-v="center">
-                <b-col md="8" data-aos="fade-right">
+                <b-col md="12" data-aos="zoom-out">
                     <b-card>
                         <b-row align-v="center">
                             <b-card-body title="Let's Talk">
@@ -41,7 +41,7 @@
                                 </b-card-body>
                                 <b-card-body title="Based in">
                                     <b-card-text>
-                                        Philadelphia, Pennsylvania
+                                        Taipei, Taiwan
                                     </b-card-text>
                                 </b-card-body>
                                 <b-row class="m-3">
@@ -55,9 +55,9 @@
                         </b-row>
                     </b-card>
                 </b-col>
-                <b-col data-aos="fade-left" class="text-center">
+                <!-- <b-col data-aos="fade-left" class="text-center">
                     <img src="@/assets/img/Lina.jpg" alt="Image" class="card-img rounded-3 tilt">
-                </b-col>
+                </b-col> -->
             </b-row>
         </div>
     </div>

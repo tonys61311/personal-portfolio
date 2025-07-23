@@ -38,18 +38,13 @@ onMounted(() => {
   height: 100vh; // Full viewport height
 }
 
-.no-margin {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
 .container-grid {
   display: grid;
   grid-template-columns: 250px auto; /* 第一列固定宽度，第二列占据剩余空间 */
   min-height: 100vh;
 
   @include media-breakpoint-down(md) {
-    grid-template-columns: auto; // 调整为只有一列，或其他适当的值
+    grid-template-columns: auto; // 调整为只有一列
   }
 }
 

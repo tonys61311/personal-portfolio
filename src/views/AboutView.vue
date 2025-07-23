@@ -49,13 +49,13 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 const personalInfo = {
   "Degree:": "CS Master",
   "Work Experience:": "4 years",
-  "City:": "Philadelphia, USA",
+  "City:": "Taipei, Taiwan",
   "Email:": "tonys61311@gmail.com"
 };
 
 const technicalSkills = {
   "Front-End": ["JavaScript", "TypeScript", "Vue.js", "HTML", "CSS"],
-  "App": ["Dart(Flutter)", "SwiftUI"],
+  "App": ["Dart", "Flutter", "SwiftUI"],
   "Back-End": ["Java", "Python", "Django"],
   "Database": ["MySQL", "SQLite", "SQL Server"],
   "Version Control": ["Git", "Github"]
@@ -103,6 +103,10 @@ const introduction = `
     list-style-type: none;
     padding-left: 10px;
     margin-left: 0;
+
+    li {
+      white-space: nowrap;
+    }
   }
 
   .fa-icon {
